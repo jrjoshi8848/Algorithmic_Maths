@@ -1,7 +1,7 @@
 #include"include.cpp"
 void root(float a[],int l,float x1,float x2,float e)
 {  int it=0;
-    float px,x,f0,f1,f2,error=10000;
+    float px,x,f0,f1,f2,error;
     px=x1;
     x=(x1+x2)/2;
     f0=fun(a,l,x);
@@ -12,7 +12,7 @@ void root(float a[],int l,float x1,float x2,float e)
    cout<<"\n\n\nIteration       X1             f1            x2           f2             x            f0             Error";
    it++;
    cout<<"\n\n     "<<it<<"      "<<x1<<"     "<<f1<<"    "<<x2<<"    "<<f2<<"    "<<x<<"    "<<f0;
-   while(error>=e)
+   do
    {
    if(f0<0 && f1<0 && f2>0)
    {
@@ -42,7 +42,7 @@ void root(float a[],int l,float x1,float x2,float e)
     error=-1*error;
     it++;
     cout<<"\n     "<<it<<"      "<<x1<<"     "<<f1<<"    "<<x2<<"    "<<f2<<"    "<<x<<"    "<<f0<<"       "<<error;
-   }
+   }while(error>=e);
 cout<<"\n\n\n\t# In iteration "<<it<<" error is less then "<<e<<" So requies root is "<<x;
 cout<<"\n\n=======================================================================================================";
 
