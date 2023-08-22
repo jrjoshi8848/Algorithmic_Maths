@@ -29,10 +29,13 @@ int main()
      {
        r=-1*r;
      }
-    cout<<"root lies between "<<-1*r<<" to "<<r<<endl;
+    cout<<"\n\tRange of root is ["<<-1*r<<","<<r<<"]."<<endl;
     l1=2*r+1;
 
-    cout<<"\t\tX\t\tF(x)\n";
+    cout<<"\n\n=========================================================================";
+
+
+    cout<<"\n\t\tX\t\tF(x)\n";
 
      for(i=-r;i<=r;i++)
       {
